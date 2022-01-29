@@ -1,0 +1,16 @@
+{
+    "start" : {
+        "moduleA" : {
+            "viewAA" : {
+                "stringAAA" : "string a stuff",
+                "stringAAAFormat" : "string a format stuff"
+            }
+        },
+        
+        "moduleB" : {
+            "viewBB" : {
+                "stringBBB" : "string b stuff"
+            }
+        }
+    }
+}

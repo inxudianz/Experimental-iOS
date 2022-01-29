@@ -13,6 +13,10 @@
 		92F04D2027A5C9C200E7E69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F04D1E27A5C9C200E7E69D /* Main.storyboard */; };
 		92F04D2227A5C9C400E7E69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F04D2127A5C9C400E7E69D /* Assets.xcassets */; };
 		92F04D2527A5C9C400E7E69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F04D2327A5C9C400E7E69D /* LaunchScreen.storyboard */; };
+		92F04D3527A5CA0300E7E69D /* MemberLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F04D2E27A5CA0200E7E69D /* MemberLookup.swift */; };
+		92F04D3827A5CA0300E7E69D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F04D3227A5CA0200E7E69D /* SceneDelegate.swift */; };
+		92F04D3927A5CA0300E7E69D /* localize.json in Resources */ = {isa = PBXBuildFile; fileRef = 92F04D3327A5CA0200E7E69D /* localize.json */; };
+		92F04D3A27A5CA0300E7E69D /* MemberLookupC.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F04D3427A5CA0300E7E69D /* MemberLookupC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,12 @@
 		92F04D2127A5C9C400E7E69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92F04D2427A5C9C400E7E69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92F04D2627A5C9C400E7E69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F04D2D27A5CA0200E7E69D /* Experimental-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Experimental-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		92F04D2E27A5CA0200E7E69D /* MemberLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberLookup.swift; sourceTree = "<group>"; };
+		92F04D3027A5CA0200E7E69D /* MemberLookupC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberLookupC.h; sourceTree = "<group>"; };
+		92F04D3227A5CA0200E7E69D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		92F04D3327A5CA0200E7E69D /* localize.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = localize.json; sourceTree = "<group>"; };
+		92F04D3427A5CA0300E7E69D /* MemberLookupC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberLookupC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,29 @@
 		92F04D1727A5C9C200E7E69D /* Experimental-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				92F04D3B27A5CA5900E7E69D /* Lookup */,
 				92F04D1827A5C9C200E7E69D /* AppDelegate.swift */,
 				92F04D1A27A5C9C200E7E69D /* SceneDelegate.swift */,
+				92F04D3327A5CA0200E7E69D /* localize.json */,
+				92F04D3227A5CA0200E7E69D /* SceneDelegate.swift */,
 				92F04D1C27A5C9C200E7E69D /* ViewController.swift */,
 				92F04D1E27A5C9C200E7E69D /* Main.storyboard */,
 				92F04D2127A5C9C400E7E69D /* Assets.xcassets */,
 				92F04D2327A5C9C400E7E69D /* LaunchScreen.storyboard */,
 				92F04D2627A5C9C400E7E69D /* Info.plist */,
+				92F04D2D27A5CA0200E7E69D /* Experimental-iOS-Bridging-Header.h */,
 			);
 			path = "Experimental-iOS";
+			sourceTree = "<group>";
+		};
+		92F04D3B27A5CA5900E7E69D /* Lookup */ = {
+			isa = PBXGroup;
+			children = (
+				92F04D2E27A5CA0200E7E69D /* MemberLookup.swift */,
+				92F04D3027A5CA0200E7E69D /* MemberLookupC.h */,
+				92F04D3427A5CA0300E7E69D /* MemberLookupC.m */,
+			);
+			path = Lookup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +123,7 @@
 				TargetAttributes = {
 					92F04D1427A5C9C200E7E69D = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -125,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F04D3927A5CA0300E7E69D /* localize.json in Resources */,
 				92F04D2527A5C9C400E7E69D /* LaunchScreen.storyboard in Resources */,
 				92F04D2227A5C9C400E7E69D /* Assets.xcassets in Resources */,
 				92F04D2027A5C9C200E7E69D /* Main.storyboard in Resources */,
@@ -138,9 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F04D3827A5CA0300E7E69D /* SceneDelegate.swift in Sources */,
 				92F04D1D27A5C9C200E7E69D /* ViewController.swift in Sources */,
 				92F04D1927A5C9C200E7E69D /* AppDelegate.swift in Sources */,
 				92F04D1B27A5C9C200E7E69D /* SceneDelegate.swift in Sources */,
+				92F04D3527A5CA0300E7E69D /* MemberLookup.swift in Sources */,
+				92F04D3A27A5CA0300E7E69D /* MemberLookupC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +316,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Experimental-iOS/Info.plist";
@@ -305,6 +336,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "inx.Experimental-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Experimental-iOS/Experimental-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,8 +348,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Experimental-iOS/Info.plist";
@@ -333,6 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "inx.Experimental-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Experimental-iOS/Experimental-iOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
