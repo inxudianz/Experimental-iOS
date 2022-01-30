@@ -36,6 +36,8 @@ public class Localizable: NSObject {
     private var dict: [String: Any]
     private let lastLookup: (key: String, value: Any?)
     
+    private static let localizableSeparator = "->"
+    
     @objc
     public override init() {
         dict = [:]
@@ -46,14 +48,43 @@ public class Localizable: NSObject {
         self.dict = dict
         self.lastLookup = lastLookup
     }
-      
+    
     @objc
     public subscript(dynamicMember member: String) -> Localizable {
         if dict.isEmpty {
             dict = data
         }
         
-        return .init(with: dict[member] as? [String: Any] ?? [:], lastLookup: (member, dict[member]))
+        let separatedMembers = member.components(separatedBy: Self.localizableSeparator)
+        
+        var lookedUpDict: [String: Any]? = nil
+        var lookedUpInfo: (key: String, value: Any?) = ("","")
+        
+        if separatedMembers.count > 1 {
+            for separatedMember in separatedMembers {
+                if lookedUpDict != nil {
+                    if let lastLookedUpDict = lookedUpDict,
+                       let lookUpDict =  lastLookedUpDict[separatedMember] as? [String: Any] {
+                        lookedUpDict = lookUpDict
+                        lookedUpInfo = (separatedMember, lookedUpDict)
+                        continue
+                    }
+                }
+                else if let lookupDict = dict[separatedMember] as? [String : Any] {
+                    lookedUpDict = lookupDict
+                    lookedUpInfo = (separatedMember, lookedUpDict)
+                    continue
+                }
+                break
+            }
+        }
+        
+        if lookedUpDict != nil {
+            return .init(with: lookedUpDict ?? [:], lastLookup: lookedUpInfo)
+        }
+        else {
+            return .init(with: dict[member] as? [String: Any] ?? [:], lastLookup: (member, dict[member]))
+        }
     }
     
     @objc
@@ -104,7 +135,8 @@ func tester() {
     
     let stringFormat = String(format: localize.start.moduleA.viewAA.stringAAAFormat.localizedString(),
                               "Format Use")
-//    print(localizeA.localizedString())
+    
+    print(localizeA.localizedString())
     let lookup = LookupTest()
     lookup.testLookup()
 }

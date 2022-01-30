@@ -18,8 +18,10 @@
     
     Localizable *designated = [[[localizedTest objectForKeyedSubscript:@"start"] objectForKeyedSubscript:@"moduleA"] objectForKeyedSubscript:@"viewAA"];
     
-    NSLog([[designated objectForKeyedSubscript:@"stringAAA"] localizedString]);
-    NSLog([[designated objectForKeyedSubscript:@"stringAAA"] stringValue]);
+    Localizable *designatedX = [localizedTest objectForKeyedSubscript:@"start->moduleA->viewAA"];
+    
+    NSLog([[designatedX objectForKeyedSubscript:@"stringAAA"] localizedString]);
+    NSLog([[designatedX objectForKeyedSubscript:@"stringAAA"] stringValue]);
 }
 
 @end
