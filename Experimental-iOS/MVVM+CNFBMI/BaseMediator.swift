@@ -8,3 +8,7 @@
 import Foundation
 
 // vm <-> vc mediator
+
+class BaseMediator {
+    
+}

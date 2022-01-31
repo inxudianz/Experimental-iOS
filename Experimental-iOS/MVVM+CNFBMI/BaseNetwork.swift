@@ -8,3 +8,7 @@
 import Foundation
 
 // view level network
+
+class BaseNetwork {
+    
+}

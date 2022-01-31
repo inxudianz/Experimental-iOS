@@ -8,3 +8,7 @@
 import Foundation
 
 // converter
+
+class BaseAdapter {
+    
+}

@@ -8,3 +8,7 @@
 import Foundation
 
 // coordinator
+
+class BaseCoordinator {
+    
+}

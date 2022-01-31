@@ -11,7 +11,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tester()
+        
+        //calculateTimeElapsed(for: completionOld, shouldPrintResult: true)
+        
+        //completion()
+        
+        //calculateTimeElapsed(for: underEstimate, shouldPrintResult: true)
+        //calculateTimeElapsed(for: underEstimateOld, shouldPrintResult: true)
+//        tester()
         // Do any additional setup after loading the view.
     }
 

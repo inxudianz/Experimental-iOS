@@ -18,4 +18,6 @@ public final class ImageBuilder: NSObject {
     public static func buildImage() -> UIImage {
         return resultedImage
     }
+    
+    
 }

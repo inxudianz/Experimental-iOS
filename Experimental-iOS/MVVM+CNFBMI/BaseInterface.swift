@@ -8,3 +8,7 @@
 import Foundation
 
 // interface
+
+class BaseInterface {
+    
+}

@@ -8,3 +8,7 @@
 import Foundation
 
 // vm
+
+class BaseViewModel {
+    
+}
