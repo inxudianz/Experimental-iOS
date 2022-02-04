@@ -16,12 +16,12 @@
 - (void)testLookup {
     Localizable *localizedTest = [Localizable new];
     
-    Localizable *designated = [[[localizedTest objectForKeyedSubscript:@"start"] objectForKeyedSubscript:@"moduleA"] objectForKeyedSubscript:@"viewAA"];
-    
-    Localizable *designatedX = [localizedTest objectForKeyedSubscript:@"start->moduleA->viewAA"];
-    
-    NSLog([[designatedX objectForKeyedSubscript:@"stringAAA"] localizedString]);
-    NSLog([[designatedX objectForKeyedSubscript:@"stringAAA"] stringValue]);
+//     Localizable *designated = [[[localizedTest objectForKeyedSubscript:@"start"] objectForKeyedSubscript:@"moduleA"] objectForKeyedSubscript:@"viewAA"];
+//
+//    Localizable *designatedX = [localizedTest objectForKeyedSubscript:@"start->moduleA->viewAA->awdaw->awpodkaw"];
+    NSLog([[[Localizable new] objectForKeyedSubscript:@"start->moduleA->viewAA->stringAAA"] localizedString]);
+//    NSLog([[designatedX objectForKeyedSubscript:@"stringAAA"] localizedString]);
+//    NSLog([[designatedX objectForKeyedSubscript:@"stringAAA"] stringValue]);
 }
 
 @end

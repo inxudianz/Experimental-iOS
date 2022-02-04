@@ -58,16 +58,21 @@ public class Localizable: NSObject {
         let separatedMembers = member.components(separatedBy: Self.localizableSeparator)
         
         var lookedUpDict: [String: Any]? = nil
-        var lookedUpInfo: (key: String, value: Any?) = ("","")
+        var lookedUpInfo: (key: String, value: Any?)? = nil
         
         if separatedMembers.count > 1 {
             for separatedMember in separatedMembers {
                 if lookedUpDict != nil {
-                    if let lastLookedUpDict = lookedUpDict,
-                       let lookUpDict =  lastLookedUpDict[separatedMember] as? [String: Any] {
-                        lookedUpDict = lookUpDict
-                        lookedUpInfo = (separatedMember, lookedUpDict)
-                        continue
+                    if let lastLookedUpDict = lookedUpDict {
+                        if let lookUpDict = lastLookedUpDict[separatedMember] as? [String: Any] {
+                            lookedUpDict = lookUpDict
+                            lookedUpInfo = (separatedMember, lookedUpDict)
+                            continue
+                        }
+                        else {
+                            lookedUpDict = lastLookedUpDict[separatedMember] as? [String : Any] ?? [:]
+                            lookedUpInfo = (separatedMember, lastLookedUpDict[separatedMember])
+                        }
                     }
                 }
                 else if let lookupDict = dict[separatedMember] as? [String : Any] {
@@ -79,8 +84,8 @@ public class Localizable: NSObject {
             }
         }
         
-        if lookedUpDict != nil {
-            return .init(with: lookedUpDict ?? [:], lastLookup: lookedUpInfo)
+        if lookedUpDict != nil || lookedUpInfo != nil {
+            return .init(with: lookedUpDict ?? [:], lastLookup: lookedUpInfo ?? ("",""))
         }
         else {
             return .init(with: dict[member] as? [String: Any] ?? [:], lastLookup: (member, dict[member]))
@@ -130,13 +135,13 @@ public class Localizable: NSObject {
 
 
 func tester() {
-    let localize = Localizable()
-    let localizeA: Localizable = localize.start.moduleA.viewAA.stringAAA
-    
-    let stringFormat = String(format: localize.start.moduleA.viewAA.stringAAAFormat.localizedString(),
-                              "Format Use")
-    
-    print(localizeA.localizedString())
+//        let localize = Localizable()
+//        let localizeA: Localizable = localize.start.moduleA.viewAA.stringAAA
+//    //
+//    //    let stringFormat = String(format: localize.start.moduleA.viewAA.stringAAAFormat.localizedString(),
+//    //                              "Format Use")
+//    //
+//        print(localizeA.localizedString())
     let lookup = LookupTest()
     lookup.testLookup()
 }

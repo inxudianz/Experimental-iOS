@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         //calculateTimeElapsed(for: underEstimate, shouldPrintResult: true)
         //calculateTimeElapsed(for: underEstimateOld, shouldPrintResult: true)
-//        tester()
+        tester()
         // Do any additional setup after loading the view.
     }
 
