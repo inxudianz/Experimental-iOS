@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5C21516E-5743-424A-B3BA-3E1D74EA9FE0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55E4A4DB-D7E5-4659-BF5C-62ACFA3237D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Experimental-iOS/Lookup/MemberLookup.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "subscript(dynamicMember:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "55E4A4DB-D7E5-4659-BF5C-62ACFA3237D0 - 4bfe9e6e3076063c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Experimental_iOS.Localizable.subscript.getter : (dynamicMember: Swift.String) -&gt; Experimental_iOS.Localizable"
+                  moduleName = "Experimental-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/williaminx/Documents/Project/Experimental-iOS/Experimental-iOS/Lookup/MemberLookup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "914">
+               </Location>
+               <Location
+                  uuid = "55E4A4DB-D7E5-4659-BF5C-62ACFA3237D0 - 4bfe9e6e3076063c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Experimental_iOS.Localizable.subscript.getter : (dynamicMember: Swift.String) -&gt; Experimental_iOS.Localizable"
+                  moduleName = "Experimental-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/williaminx/Documents/Project/Experimental-iOS/Experimental-iOS/Lookup/MemberLookup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "959">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27F8928D-1126-4E26-B837-65B1D08C1637"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Experimental-iOS/Lookup/MemberLookup.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "subscript(dynamicMember:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "276D2C57-1FF3-45F7-A057-F0C7906C83E7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Experimental-iOS/Lookup/MemberLookup.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "stringValue"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "218C1983-5CEF-4127-A8B1-0192DB6687A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Experimental-iOS/Lookup/MemberLookup.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "subscript(dynamicMember:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
