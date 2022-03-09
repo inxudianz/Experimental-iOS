@@ -2,7 +2,7 @@ name: Swift
 
 on:
   pull_request:
-    branches: [ workflow ]
+    branches: [ main ]
 
 jobs:
   build:
